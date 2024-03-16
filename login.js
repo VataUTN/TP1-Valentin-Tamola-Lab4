@@ -1,12 +1,5 @@
 // Selecciona el botón de submit por su id
 const submitBtn = document.getElementById("submitBtn");
-
-// Añade un event listener para el evento 'click'
-submitBtn.addEventListener("click", function (event) {
-    event.preventDefault(); // Previene el comportamiento predeterminado del enlace
-    login(); // Llama a la función login
-});
-
 // Obtén el elemento del campo de contraseña por su id
 const psw = document.getElementById("psw");
 
@@ -18,10 +11,10 @@ psw.addEventListener("keypress", function(event) {
         login();
     }
 });
-
-// Función para realizar el inicio de sesión
-function login() {
-    // Obtén los valores de usuario y contraseña
+// Añade un event listener para el evento 'click'
+submitBtn.addEventListener("click", function (event) {
+    event.preventDefault(); // Previene el comportamiento predeterminado del enlace
+        // Obtén los valores de usuario y contraseña
     const username = document.querySelector(".user-box input[type='text']").value;
     const password = document.querySelector(".user-box input[type='password']").value;
 
@@ -47,4 +40,8 @@ function login() {
             }
         })
         .catch(error => alert(error)); // Muestra una alerta en caso de error en la solicitud
-}
+
+});
+
+
+
