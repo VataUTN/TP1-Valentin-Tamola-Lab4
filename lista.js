@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+
     const searchInput = document.getElementById("search-input");
     const searchBtn = document.getElementById("search-btn");
     const tableBody = document.getElementById("users");
@@ -89,4 +89,3 @@ document.addEventListener("DOMContentLoaded", function () {
                 alert("Ocurrió un error al bloquear/desbloquear usuario. Por favor, inténtalo de nuevo.");
             });
     }
-});
